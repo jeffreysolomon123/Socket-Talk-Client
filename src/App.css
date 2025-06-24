@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+:root {
+    /* hsl (fallback color) */
+    --bg-dark: hsl(219 23% 1%);
+    --bg: hsl(217 15% 5%);
+    --bg-light: hsl(217 8% 9%);
+    --text: hsl(217 46% 95%);
+    --text-muted: hsl(217 7% 70%);
+    --highlight: hsl(217 5% 39%);
+    --border: hsl(217 6% 29%);
+    --border-muted: hsl(217 9% 18%);
+    --primary: hsl(217 78% 75%);
+    --secondary: hsl(38 55% 61%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);
+    /* oklch */
+    --bg-dark: oklch(0.1 0.005 260);
+    --bg: oklch(0.15 0.005 260);
+    --bg-light: oklch(0.2 0.005 260);
+    --text: oklch(0.96 0.01 260);
+    --text-muted: oklch(0.76 0.01 260);
+    --highlight: oklch(0.5 0.01 260);
+    --border: oklch(0.4 0.01 260);
+    --border-muted: oklch(0.3 0.01 260);
+    --primary: oklch(0.76 0.1 260);
+    --secondary: oklch(0.76 0.1 80);
+    --danger: oklch(0.7 0.05 30);
+    --warning: oklch(0.7 0.05 100);
+    --success: oklch(0.7 0.05 160);
+    --info: oklch(0.7 0.05 260);
+}
+body.light {
+    /* hsl (fallback color) */
+    --bg-dark: hsl(217 10% 90%);
+    --bg: hsl(217 22% 95%);
+    --bg-light: hsl(217 100% 100%);
+    --text: hsl(217 28% 5%);
+    --text-muted: hsl(217 6% 29%);
+    --highlight: hsl(217 100% 100%);
+    --border: hsl(217 4% 51%);
+    --border-muted: hsl(217 5% 63%);
+    --primary: hsl(217 54% 32%);
+    --secondary: hsl(43 100% 15%);
+    --danger: hsl(9 21% 41%);
+    --warning: hsl(52 23% 34%);
+    --success: hsl(147 19% 36%);
+    --info: hsl(217 22% 41%);
+    /* oklch */
+    --bg-dark: oklch(0.92 0.005 260);
+    --bg: oklch(0.96 0.005 260);
+    --bg-light: oklch(1 0.005 260);
+    --text: oklch(0.15 0.01 260);
+    --text-muted: oklch(0.4 0.01 260);
+    --highlight: oklch(1 0.01 260);
+    --border: oklch(0.6 0.01 260);
+    --border-muted: oklch(0.7 0.01 260);
+    --primary: oklch(0.4 0.1 260);
+    --secondary: oklch(0.4 0.1 80);
+    --danger: oklch(0.5 0.05 30);
+    --warning: oklch(0.5 0.05 100);
+    --success: oklch(0.5 0.05 160);
+    --info: oklch(0.5 0.05 260);
+}
+.bg-surface {
+    background-color: var(--bg);
+}
+.bg-surface-light {
+    background-color: var(--bg-light);
+}
+.bg-surface-dark {
+    background-color: var(--bg-dark);
+}
+.bg-panel {
+    background-color: var(--bg-light);
+}
+.text-primary {
+    color: var(--primary);
+}
+.text-main {
+    color: var(--text);
+}
+.text-muted {
+    color: var(--text-muted);
+}
+.border-surface {
+    border-color: var(--border);
+}
+.border-muted {
+    border-color: var(--border-muted);
+}
+.bg-highlight {
+    background-color: var(--highlight);
+}
+.bg-danger {
+    background-color: var(--danger);
+}
+.bg-success {
+    background-color: var(--success);
+}
+.bg-warning {
+    background-color: var(--warning);
+}
+.bg-info {
+    background-color: var(--info);
+}
+
+.hover-highlight:hover {
+    background-color: var(--highlight);
+    filter: brightness(1.1);
+}
+
+
+
+.inter-small {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inter-large {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.inter-very-large {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
