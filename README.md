@@ -1,12 +1,12 @@
-# React + Vite
+# Socket-Talk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SocketTalk is a real-time chat web app built with React, Express, Socket.IO, and MongoDB. Includes secure JWT user authentication, live messaging, and persistent chat history.
 
-Currently, two official plugins are available:
+![home page chat](https://github.com/user-attachments/assets/7aebaa78-1ab6-456a-8493-9fc534807d42)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Client:** Vite React, TailwindCSS
+
+**Server:** Express, Socket.IO
