@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import io from "socket.io-client";
 
-const BASE_URL = import.meta.env.MODE === "development" ? "https://socket-talk-api.onrender.com/api" : "/"
+const BASE_URL = import.meta.env.MODE === "development" ? "https://socket-talk-api.onrender.com" : "https://socket-talk-api.onrender.com"
 
 export const useAuthStore = create((set,get) => ({
   authUser: null,
