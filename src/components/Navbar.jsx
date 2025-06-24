@@ -3,6 +3,8 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { useAuthStore } from '../store/useAuthStore';
 import ThemeToggle from "./ThemeToggle.jsx";
+import { VscGithub } from "react-icons/vsc";
+
 
 const Navbar = () => {
     const { authUser, logout } = useAuthStore();
@@ -14,9 +16,14 @@ const Navbar = () => {
             </div>
 
             <div className="flex gap-2">
+                <div className="text-2xl mr-3 mt-1.5">
+                    <Link to="https://github.com/jeffreysolomon123/Socket-Talk-Client"><VscGithub /></Link>
+                </div>
                 <div className="mr-3 mt-1">
                     <ThemeToggle />
                 </div>
+
+
 
                 {authUser && (
                     <div className="dropdown dropdown-end">
