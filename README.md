@@ -9,4 +9,17 @@ SocketTalk is a real-time chat web app built with React, Express, Socket.IO, and
 
 **Client:** Vite React, TailwindCSS
 
-**Server:** Express, Socket.IO
+**Server:** Express, Socket.IO, MongoDB, Cloudinary
+
+## Live Demo
+
+https://socket-talk-client.vercel.app/
+
+## Features
+- Realtime messaging with Socket.IO
+- Online user detection
+- JWT authentication with cookies
+- Persistent chat history
+- User registration & login
+- Profile picture uploads with Cloudinary
+- Beautiful responsive design in all devices
