@@ -17,7 +17,7 @@ export const useAuthStore = create((set,get) => ({
 
   checkAuth: async () => {
     try {
-      const res = await axiosInstance.get("https://socket-talk-api.onrender.com/api/auth/check");
+      const res = await axiosInstance.get("/auth/check");
       set({ authUser: res.data });
       get().connectSocket()
     } catch (error) {
@@ -30,7 +30,7 @@ export const useAuthStore = create((set,get) => ({
   signup: async (data) => {
     set({ isSigningUp: true });
     try {
-      const res = await axiosInstance.post("https://socket-talk-api.onrender.com/api/auth/signup", data);
+      const res = await axiosInstance.post("/auth/signup", data);
       set({ authUser: res.data });
       toast.success("Account created successfully");
       get().connectSocket()
@@ -44,7 +44,7 @@ export const useAuthStore = create((set,get) => ({
   login: async (data) => {
     set({ isLoggingIn: true });
     try {
-      const res = await axiosInstance.post("https://socket-talk-api.onrender.com/api/auth/login", data);
+      const res = await axiosInstance.post("/auth/login", data);
       set({ authUser: res.data });
       toast.success("Successfully logged in!");
 
@@ -57,7 +57,7 @@ export const useAuthStore = create((set,get) => ({
   },
   logout: async () => {
     try {
-      await axiosInstance.post("https://socket-talk-api.onrender.com/api/auth/logout");
+      await axiosInstance.post("/auth/logout");
       set({ authUser: null });
       toast.success("Successfully logged out");
       get().disconnectSocket()
@@ -68,7 +68,7 @@ export const useAuthStore = create((set,get) => ({
   updateProfile: async (data) => {
     set({ isUpdatingProfile: true });
     try {
-      const res = await axiosInstance.put("https://socket-talk-api.onrender.com/api/auth/update-profile", data);
+      const res = await axiosInstance.put("/auth/update-profile", data);
       set({ authUser: res.data });
       console.log(data);
       toast.success("Profile updated sucessfully!");
