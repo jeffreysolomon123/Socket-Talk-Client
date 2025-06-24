@@ -44,7 +44,7 @@ export const useAuthStore = create((set,get) => ({
   login: async (data) => {
     set({ isLoggingIn: true });
     try {
-      const res = await axiosInstance.post("/auth/login", data);
+      const res = await axiosInstance.post("https://socket-talk-api.onrender.com/auth/login", data);
       set({ authUser: res.data });
       toast.success("Successfully logged in!");
 
@@ -57,7 +57,7 @@ export const useAuthStore = create((set,get) => ({
   },
   logout: async () => {
     try {
-      await axiosInstance.post("/auth/logout");
+      await axiosInstance.post("https://socket-talk-api.onrender.com/auth/logout");
       set({ authUser: null });
       toast.success("Successfully logged out");
       get().disconnectSocket()
@@ -68,7 +68,7 @@ export const useAuthStore = create((set,get) => ({
   updateProfile: async (data) => {
     set({ isUpdatingProfile: true });
     try {
-      const res = await axiosInstance.put("/auth/update-profile", data);
+      const res = await axiosInstance.put("https://socket-talk-api.onrender.com/auth/update-profile", data);
       set({ authUser: res.data });
       console.log(data);
       toast.success("Profile updated sucessfully!");
@@ -86,7 +86,9 @@ export const useAuthStore = create((set,get) => ({
     const socket = io(BASE_URL,{
       query:{
         userId: authUser._id,
-      }
+      },
+      transports: ["websocket", "polling"],
+      withCredentials: true,
     })
     socket.connect()
 
